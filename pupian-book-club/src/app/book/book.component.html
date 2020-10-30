@@ -18,15 +18,14 @@
     </p>
 
     <button
-      [disabled]="!rs.rateDownAllowed(book)"
-      (click)="rateDown()"
-      class="mr-2 btn btn-secondary">👎</button>
-
-    <button
-      testRateUpButton
       [disabled]="!rs.rateUpAllowed(book)"
       (click)="rateUp()"
       class="btn btn-primary mr-2">👍</button>
+
+    <button
+      [disabled]="!rs.rateDownAllowed(book)"
+      (click)="rateDown()"
+      class="mr-2 btn btn-secondary">👎</button>
 
   </div>
 </div>
