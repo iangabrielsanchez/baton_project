@@ -28,9 +28,7 @@ export class DashboardComponent implements OnInit {
       .getAllViaSwagger()
       // .getAllViaGraphQL()
       .pipe(tap(x => console.warn(x)))
-
-      // FIXME: subscribe code is never called, no data comes
-      // .subscribe(books => this.books = books);
+      .subscribe(books => this.books = books);
   }
 
   sortBooks(book: Book) {
